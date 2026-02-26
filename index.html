@@ -63,17 +63,22 @@
   <!-- ============================================ -->
   <nav>
     <img id="nav-logo" src="/images/horizontal-logo-white.svg" alt="logo">
-    <ul class="nav-items">
+    <ul class="nav-items" id="nav-items">
       <li>About</li>
       <li>Pricing</li>
       <li>Portfolio</li>
       <li>Resources</li>
       <li>Contact</li>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
-        <img src="/images/sun-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__sun">
-        <img src="/images/moon-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__moon">
-      </button>
     </ul>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
+      <img src="/images/sun-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__sun">
+      <img src="/images/moon-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__moon">
+    </button>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-items">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
   </nav>
   <main id="main">
 
@@ -101,9 +106,9 @@
       </div>
     </div>
 
-    <section class="hero-container">
+    <!-- <section class="hero-container">
       <h1>Small Business <span>Application Design</span></h1>
-    </section>
+    </section> -->
   </main>
   <script src="/js/theme.js"></script>
 </body>
