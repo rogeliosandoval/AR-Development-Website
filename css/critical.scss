@@ -3,9 +3,179 @@ $breakpoint-phone: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
+// #region Hero
+.hero-container {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 8rem 2rem;
+  margin-top: 1rem;
+
+  @media (max-width: $breakpoint-desktop) {
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem 4rem;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 2.5rem 1.5rem 3.5rem;
+    gap: 1.75rem;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    padding: 2rem 1.25rem 0;
+    gap: 1.5rem;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (max-width: $breakpoint-desktop) {
+    align-items: center;
+  }
+}
+
+.hero-container h1 {
+  font-size: 4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.15;
+
+  span {
+    color: var(--theme-color-main);
+    background-image: linear-gradient(#fff0 75%, var(--color-highlight-underline) 75%);
+  }
+
+  @media (max-width: $breakpoint-desktop) {
+    font-size: 2.75rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 2.25rem;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1.9rem;
+  }
+}
+
+.hero-description {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 500px;
+
+  @media (max-width: $breakpoint-desktop) {
+    text-align: center;
+    max-width: 560px;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1rem;
+  }
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-desktop) {
+    justify-content: center;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--theme-color-main);
+    outline-offset: 3px;
+  }
+}
+
+.btn-primary {
+  background-color: var(--theme-color-main);
+  color: var(--color-bg);
+  border-color: var(--theme-color-main);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--theme-color-main);
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--theme-color-accent);
+  border-color: var(--theme-color-accent);
+
+  &:hover {
+    background-color: var(--theme-color-accent);
+    color: var(--color-bg);
+  }
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: $breakpoint-desktop) {
+    img {
+      max-width: 520px;
+    }
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    display: none;
+  }
+}
+// #endregion
+
 // #region Testimonials
 .testimonials-section {
-  padding:  0;
+  padding: 3rem 1.5rem 5rem;
   text-align: center;
 }
 
@@ -13,34 +183,51 @@ $breakpoint-desktop: 1024px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1rem;
 
-  @media (max-width: 1085px) {
-    display: none;
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    // align-items: center;
+    // gap: 0.75rem;
   }
 }
 
 .testimonial-stars {
   color: var(--color-testimonial-stars);
-  font-size: 1.1rem;
-  background: #0a101d;
+  font-size: 1.15rem;
   width: fit-content;
-  margin: auto;
-  padding: 0.1rem 0.5rem;
-  border-radius: 5px;
-  margin-bottom: 0.3rem;
+  margin: 0 auto 0.5rem;
 }
 
 .testimonial-box {
-  padding: 20px;
-  margin: 10px;
+  padding: 1.5rem 1.25rem;
+  margin: 0;
   text-align: center;
-  flex: 1 1 300px;
-  max-width: 300px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+
+  // @media (max-width: $breakpoint-tablet) {
+  //   max-width: 480px;
+  //   width: 100%;
+  // }
+
+  @media (max-width: $breakpoint-phone) {
+    max-width: 100%;
+    padding: 1.25rem 1rem;
+    flex: auto;
+  }
 
   p {
     font-size: 1rem;
     color: var(--color-text-muted);
     margin: 0;
+    line-height: 1.55;
 
     span {
       color: var(--theme-color-accent);
@@ -50,49 +237,6 @@ $breakpoint-desktop: 1024px;
   h3 {
     font-size: 1.2em;
     color: var(--color-text);
-  }
-}
-// #endregion
-
-// #region Hero
-.hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-
-  h1 {
-    font-size: 4rem;
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-    color: var(--color-text);
-    margin: 0;
-
-    span {
-      color: var(--theme-color-main);
-      background-image: linear-gradient(#fff0 75%, var(--color-highlight-underline) 75%);
-    }
-
-    @media (max-width: $breakpoint-desktop) {
-      padding: 0 20px;
-      line-height: 3rem;
-      font-size: 2.7rem;
-      margin: auto;
-    }
-
-    @media (max-width: $breakpoint-phone) {
-      padding: 0;
-    }
-  }
-
-  @media (max-width: $breakpoint-desktop) {
-    padding: 15px;
-  }
-
-  @media (max-width: $breakpoint-phone) {
-    font-size: 1.7rem;
-    padding-top: 0;
-    gap: 20px;
   }
 }
 // #endregion

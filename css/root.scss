@@ -12,16 +12,20 @@ $breakpoint-desktop: 1024px;
   --color-text-muted:          #fafbfc;
   --color-testimonial-stars:   #fff64f;
   --color-highlight-underline: #1b3d8185;
+  --color-card-bg:             rgba(255, 255, 255, 0.04);
+  --color-card-border:         rgba(255, 255, 255, 0.08);
 }
 
 body.light-mode {
   --theme-color-main:          #004aad;
   --theme-color-accent:        #b700f9;
-  --color-bg:                  #f9edff;
+  --color-bg:                  #f5f5f5;
   --color-text:                #0d1117;
   --color-text-muted:          #2a2d33;
-  --color-testimonial-stars:   #fff700;
+  --color-testimonial-stars:   #f59e0b;
   --color-highlight-underline: #98d0f899;
+  --color-card-bg:             #ffffff;
+  --color-card-border:         rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -121,7 +125,7 @@ nav {
   transition: background-color 0.35s ease, color 0.35s ease;
 
   img {
-    max-width: 250px;
+    max-width: 230px;
     transition: opacity 0.2s ease;
     margin-right: auto;
 
