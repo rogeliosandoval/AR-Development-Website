@@ -1,0 +1,85 @@
+// Website Colors
+$theme-color-main: #08c8f0;
+$theme-color-sub: #d665ff;
+
+// Breakpoints
+$breakpoint-phone: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// #region Testimonials
+.testimonials-section {
+  padding:  0;
+  text-align: center;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 1085px) {
+    display: none;
+  }
+}
+
+.testimonial-stars {
+  color: #fff64f;
+  font-size: 1.1rem;
+}
+
+.testimonial-box {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 300px;
+
+  p {
+    font-size: 1rem;
+    color: #fafbfc;
+    margin: 0;
+
+    span { 
+      color: #d665ff;
+    }
+  }
+
+  h3 {
+    font-size: 1.2em;
+    color: white;
+  }
+}
+// #endregion
+
+// #region Hero
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 4rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+
+    span {
+      color: $theme-color-main;
+      background-image: linear-gradient(#fff0 75%, #1b3d8185 75%);
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+      padding: 0 20px;
+      line-height: 3rem;
+      font-size: 2.7rem;
+      margin: auto;
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      padding: 0;
+    }
+  }
+}
+// #endregion
