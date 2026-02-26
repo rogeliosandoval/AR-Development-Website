@@ -17,6 +17,13 @@
 .testimonial-stars {
   color: var(--color-testimonial-stars);
   font-size: 1.1rem;
+  background: #0a101d;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
 }
 
 .testimonial-box {
@@ -43,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 .hero-container h1 {
   font-size: 4rem;
