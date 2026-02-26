@@ -15,7 +15,7 @@
 }
 
 .testimonial-stars {
-  color: #fff64f;
+  color: var(--color-testimonial-stars);
   font-size: 1.1rem;
 }
 
@@ -28,15 +28,15 @@
 }
 .testimonial-box p {
   font-size: 1rem;
-  color: #fafbfc;
+  color: var(--color-text-muted);
   margin: 0;
 }
 .testimonial-box p span {
-  color: #d665ff;
+  color: var(--theme-color-accent);
 }
 .testimonial-box h3 {
   font-size: 1.2em;
-  color: white;
+  color: var(--color-text);
 }
 
 .hero-container {
@@ -48,12 +48,12 @@
   font-size: 4rem;
   font-family: "Inter", sans-serif;
   font-weight: 800;
-  color: white;
+  color: var(--color-text);
   margin: 0;
 }
 .hero-container h1 span {
-  color: #08c8f0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 75%, rgba(27, 61, 129, 0.5215686275) 75%);
+  color: var(--theme-color-main);
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 75%, var(--color-highlight-underline) 75%);
 }
 @media (max-width: 1024px) {
   .hero-container h1 {
@@ -66,5 +66,17 @@
 @media (max-width: 480px) {
   .hero-container h1 {
     padding: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-container {
+    font-size: 1.7rem;
+    padding-top: 0;
+    gap: 20px;
   }
 }/*# sourceMappingURL=critical.css.map */

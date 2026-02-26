@@ -1,3 +1,27 @@
+:root {
+  --theme-color-main: #08c8f0;
+  --theme-color-accent: #d665ff;
+  --color-bg: #0a101d;
+  --color-text: #ffffff;
+  --color-text-muted: #fafbfc;
+  --color-testimonial-stars: #fff64f;
+  --color-highlight-underline: #1b3d8185;
+}
+
+body.light-mode {
+  --theme-color-main: #004aad;
+  --theme-color-accent: #b700f9;
+  --color-bg: #f9edff;
+  --color-text: #0d1117;
+  --color-text-muted: #2a2d33;
+  --color-testimonial-stars: #c0ba0e;
+  --color-highlight-underline: #98d0f899;
+}
+
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter_24pt-Regular.ttf") format("truetype");
@@ -43,8 +67,9 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #0a101d;
+  background-color: var(--color-bg);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 body p, html p {
   font-family: "IBM Plex Sans", sans-serif;
@@ -72,12 +97,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 130px;
-  color: white;
+  color: var(--color-text);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 nav img {
   max-width: 250px;
+  transition: opacity 0.2s ease;
 }
 
 .nav-items {
@@ -89,10 +116,67 @@ nav img {
   list-style: none;
 }
 .nav-items li {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .nav-items li:hover {
   cursor: pointer;
-  color: #08c8f0;
+  color: var(--theme-color-main);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(165, 165, 165, 0.08);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--theme-color-main);
+  outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.theme-toggle__sun {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+.theme-toggle__moon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.5);
+  filter: brightness(0);
+}
+
+body.light-mode .theme-toggle__sun {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.5);
+}
+body.light-mode .theme-toggle__moon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+body.light-mode .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.04);
 }/*# sourceMappingURL=root.css.map */

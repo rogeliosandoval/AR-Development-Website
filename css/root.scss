@@ -1,10 +1,32 @@
-// Website Colors
-$theme-color-main: #08c8f0;
-
 // Breakpoints
 $breakpoint-phone: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+
+// CSS Custom Properties (Runtime theme tokens)
+:root {
+  --theme-color-main:          #08c8f0;
+  --theme-color-accent:        #d665ff;
+  --color-bg:                  #0a101d;
+  --color-text:                #ffffff;
+  --color-text-muted:          #fafbfc;
+  --color-testimonial-stars:   #fff64f;
+  --color-highlight-underline: #1b3d8185;
+}
+
+body.light-mode {
+  --theme-color-main:          #004aad;
+  --theme-color-accent:        #b700f9;
+  --color-bg:                  #f9edff;
+  --color-text:                #0d1117;
+  --color-text-muted:          #2a2d33;
+  --color-testimonial-stars:   #c0ba0e;
+  --color-highlight-underline: #98d0f899;
+}
+
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
 
 // #region Fonts
 @font-face {
@@ -60,8 +82,9 @@ $breakpoint-desktop: 1024px;
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #0a101d;
+  background-color: var(--color-bg);
   overflow-x: hidden;
+  min-height: 100vh;
 
   p {
     font-family: "IBM Plex Sans", sans-serif;
@@ -92,12 +115,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 130px;
-  color: white;
+  color: var(--color-text);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
+  transition: background-color 0.35s ease, color 0.35s ease;
 
   img {
     max-width: 250px;
+    transition: opacity 0.2s ease;
   }
 }
 
@@ -110,13 +135,78 @@ nav {
   list-style: none;
 
   li {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
 
     &:hover {
       cursor: pointer;
-      color: $theme-color-main;
+      color: var(--theme-color-main);
     }
+  }
+}
+// #endregion
+
+// #region Theme Toggle
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgba(165, 165, 165, 0.080);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--theme-color-main);
+    outline-offset: 2px;
+  }
+}
+
+.theme-toggle__icon {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.theme-toggle__sun {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+.theme-toggle__moon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.5);
+  filter: brightness(0);
+}
+
+body.light-mode {
+  .theme-toggle__sun {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.5);
+  }
+
+  .theme-toggle__moon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+
+  .theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.040);
   }
 }
 // #endregion
