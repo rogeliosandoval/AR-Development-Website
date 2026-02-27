@@ -558,6 +558,32 @@ $breakpoint-contact: 1100px;
   }
 }
 
+.contact-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  gap: 1.5rem;
+  width: 100%;
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+    filter: invert(27%) sepia(80%) saturate(1200%) hue-rotate(330deg) brightness(95%) contrast(105%);
+  }
+
+  &__message {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 320px;
+  }
+}
+
 body.light-mode {
   .contact-icon {
     filter: invert(16%) sepia(78%) saturate(1648%) hue-rotate(207deg) brightness(97%) contrast(108%);

@@ -24,10 +24,18 @@ document.getElementById('form').addEventListener('submit', function (e) {
         '</div>'
       form.reset()
     } else {
-      console.log(response)
+      wrapper.innerHTML =
+        '<div class="contact-error">' +
+          '<img src="/images/circle-exclamation-solid-full.svg" alt="" class="contact-error__icon">' +
+          '<p class="contact-error__message">Something went wrong. Please try again or reach out directly at roger&#64;atRoger.com</p>' +
+        '</div>'
     }
   })
-  .catch(error => {
-    console.log(error)
+  .catch(() => {
+    wrapper.innerHTML =
+      '<div class="contact-error">' +
+        '<img src="/images/circle-exclamation-solid-full.svg" alt="" class="contact-error__icon">' +
+        '<p class="contact-error__message">Something went wrong. Please try again or reach out directly at roger&#64;atRoger.com</p>' +
+      '</div>'
   })
 })
