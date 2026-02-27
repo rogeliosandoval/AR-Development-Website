@@ -1,0 +1,153 @@
+.pricing-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+@media (max-width: 768px) {
+  .pricing-container {
+    align-items: normal;
+  }
+}
+
+.pricing-title {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+.pricing-title h2 {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+.pricing-title h2 span {
+  color: var(--theme-color-main);
+}
+@media (max-width: 480px) {
+  .pricing-title h2 {
+    font-size: 2.3rem;
+  }
+}
+.pricing-title h3 {
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0.8rem 0 0;
+}
+@media (max-width: 480px) {
+  .pricing-title h3 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 1150px) {
+  .pricing-cards {
+    flex-direction: column;
+  }
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card-bg);
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 12px;
+  border: 1px solid var(--color-card-border);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+@media screen and (max-width: 1150px) {
+  .pricing-card {
+    width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.webapp {
+  box-shadow: 0 2px 13px var(--theme-color-main);
+  background-color: black;
+}
+.webapp .pricing-card__features--feature span {
+  color: var(--theme-color-main);
+}
+.webapp .pricing-card__price strong {
+  color: var(--theme-color-main);
+}
+
+.pricing-card__title {
+  font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.7rem;
+}
+
+.pricing-card__features--feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricing-card__features--feature img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+.pricing-card__features--feature .feature-label {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.pricing-card__features--feature span {
+  font-weight: 600;
+  color: var(--theme-color-accent);
+}
+
+.pricing-card__price {
+  padding-top: 1.2rem;
+  margin-top: auto;
+}
+.pricing-card__price strong {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--theme-color-accent);
+}
+.pricing-card__price span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+body.light-mode .pricing-card__features--feature img {
+  filter: invert(0);
+}
+body.light-mode .webapp {
+  background-color: #f2fdff;
+}/*# sourceMappingURL=local.css.map */
