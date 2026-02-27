@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="canonical" href="https://www.atroger.com/privacy-policy.html">
+  <meta name="description" content="Privacy Policy for AR Development (atRoger). Learn how we handle the information you share through our contact form.">
+
+  <!--Favicons-->
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Chubby Designs">
+
+  <!--Styles-->
+  <link rel="stylesheet" href="/css/root.css">
+  <link rel="stylesheet" href="/css/critical.css">
+
+  <style>
+    .legal-page-header {
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--color-card-border);
+      background: linear-gradient(160deg, rgba(8, 200, 240, 0.06) 0%, transparent 60%, rgba(214, 101, 255, 0.05) 100%);
+    }
+
+    .legal-page-header__inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .legal-page-header__eyebrow {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--theme-color-main);
+      margin: 0 0 0.75rem;
+    }
+
+    .legal-page-header__title {
+      font-family: "Inter", sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      color: var(--color-text);
+      margin: 0 0 1rem;
+      line-height: 1.15;
+    }
+
+    .legal-page-header__meta {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      opacity: 0.6;
+      margin: 0;
+    }
+
+    .legal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .legal-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--theme-color-main);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color 0.15s ease;
+    }
+
+    .legal-back-link:hover {
+      color: var(--theme-color-accent);
+    }
+
+    .legal-section {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-card-border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.35s ease, border-color 0.35s ease;
+    }
+
+    .legal-section h2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--theme-color-main);
+      margin: 0 0 1rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      line-height: 1.75;
+      margin: 0 0 0.75rem;
+    }
+
+    .legal-section p:last-child,
+    .legal-section li:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section ul {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0 0;
+    }
+
+    .legal-section a {
+      color: var(--theme-color-main);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .legal-section a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-section code {
+      font-family: monospace;
+      font-size: 0.9em;
+      background-color: var(--color-card-border);
+      padding: 0.1em 0.4em;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .legal-page-header {
+        padding: 3rem 1.5rem 2.5rem;
+      }
+
+      .legal-page-header__title {
+        font-size: 2.25rem;
+      }
+
+      .legal-content {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .legal-section {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .legal-page-header {
+        padding: 2.5rem 1.25rem 2rem;
+      }
+
+      .legal-page-header__title {
+        font-size: 2rem;
+      }
+
+      .legal-content {
+        padding: 1.5rem 1.25rem 3rem;
+      }
+    }
+  </style>
+
+  <title>Privacy Policy | AR Development</title>
+</head>
+<body>
+  <!--Prevent flash of wrong theme-->
+  <script>
+    (function () {
+      var s = localStorage.getItem('theme');
+      if (s === 'light') {
+        document.body.classList.add('light-mode');
+      } else if (!s && !window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('light-mode');
+      }
+    })();
+  </script>
+
+  <!--Screen reader skip main nav-->
+  <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+  <!-- ============================================ -->
+  <!--                 Navigation                   -->
+  <!-- ============================================ -->
+  <nav class="navbar-nav">
+    <img id="nav-logo" src="/images/horizontal-logo-white.svg" alt="logo">
+    <ul class="nav-items" id="nav-items">
+      <li><a href="/#about" aria-label="about">About</a></li>
+      <li><a href="/#pricing" aria-label="pricing">Pricing</a></li>
+      <li><a href="/#contact" aria-label="contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
+      <img src="/images/sun-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__sun">
+      <img src="/images/moon-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__moon">
+    </button>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-items">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </nav>
+
+  <!-- ============================================ -->
+  <!--                 Main Content                 -->
+  <!-- ============================================ -->
+  <main id="main">
+
+    <header class="legal-page-header">
+      <div class="legal-page-header__inner">
+        <p class="legal-page-header__eyebrow">AR Development</p>
+        <h1 class="legal-page-header__title">Privacy Policy</h1>
+        <p class="legal-page-header__meta">Last updated: February 27, 2026</p>
+      </div>
+    </header>
+
+    <div class="legal-content">
+
+      <a href="/" class="legal-back-link">&#8592; Back to Home</a>
+
+      <section class="legal-section">
+        <h2>Introduction</h2>
+        <p>AR Development (operated by Roger, trading as atRoger) is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding your personal data. By using this website, you agree to the practices described here.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Information We Collect</h2>
+        <p>We only collect information you voluntarily provide through our contact form. This includes:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Your email address</li>
+          <li>Your phone number (optional)</li>
+          <li>The content of your message</li>
+        </ul>
+        <p>We do not collect any information automatically beyond what your browser transmits as part of a standard HTTP request (such as your IP address or browser type), which is handled by our hosting provider and not stored or processed by us.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>How We Use Your Information</h2>
+        <p>The information you submit through the contact form is used solely to:</p>
+        <ul>
+          <li>Respond to your inquiry or project quote request</li>
+          <li>Follow up about work we have discussed</li>
+        </ul>
+        <p>We do not sell, rent, or share your personal information with any third parties for marketing purposes.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Third-Party Services</h2>
+        <p>We use <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer">Web3Forms</a> to process contact form submissions. When you submit the form, your name, email address, phone number, and message are transmitted to Web3Forms' servers and forwarded to our business email inbox. Web3Forms processes this data solely to deliver your message and does not retain it for their own use. You can review the <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Web3Forms Privacy Policy</a> on their website.</p>
+        <p>We do not use Google Analytics, advertising pixels, or any other third-party tracking services on this site.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Cookies and Local Storage</h2>
+        <p>This website does not use cookies. We use a single browser <code>localStorage</code> entry (key: <code>theme</code>) to remember your preferred color theme between visits. This preference is stored entirely on your device and is never transmitted to any server.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Data Retention</h2>
+        <p>Contact form submissions are received in our business email account and retained for as long as necessary to fulfill your request or for legitimate business record-keeping. You may request deletion of your data at any time by contacting us directly.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Your Rights</h2>
+        <p>You may request at any time:</p>
+        <ul>
+          <li>Access to any personal data we hold about you</li>
+          <li>Correction of any inaccurate data</li>
+          <li>Deletion of your personal data from our records</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at <a href="mailto:roger@atRoger.com">roger@atRoger.com</a>.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>External Links</h2>
+        <p>This site may contain links to third-party websites such as social media profiles. We are not responsible for the privacy practices of those sites and encourage you to review their individual privacy policies.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Continued use of the website following an update constitutes acceptance of the revised policy.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Contact Us</h2>
+        <p>If you have questions or concerns about this privacy policy, please reach out:</p>
+        <ul>
+          <li>Email: <a href="mailto:roger@atRoger.com">roger&#64;atRoger.com</a></li>
+          <li>Phone: <a href="tel:+12105406838">(210) 540-6838</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================ -->
+  <!--                 Footer                       -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column footer-column--brand">
+        <a href="/" aria-label="go to homepage">
+          <img class="footer-logo footer-logo--dark" src="/images/horizontal-logo-white.svg" alt="atRoger logo" draggable="false" loading="lazy">
+          <img class="footer-logo footer-logo--light" src="/images/horizontal-logo-black.svg" alt="atRoger logo" draggable="false" loading="lazy">
+        </a>
+        <p>Affordable web apps and websites for your business. Let's get to work today!</p>
+        <a class="btn btn-primary footer-cta" href="/#contact">Get Started</a>
+      </div>
+      <div class="footer-column">
+        <div class="footer-column__title">Quick Links</div>
+        <nav>
+          <ul class="quick-links">
+            <li><a href="/" class="footer-nav-link" aria-label="home">Home</a></li>
+            <li><a href="/#about" class="footer-nav-link" aria-label="about">About</a></li>
+            <li><a href="/#pricing" class="footer-nav-link" aria-label="pricing">Pricing</a></li>
+            <li><a href="/accessibility-statement.html" class="footer-nav-link" aria-label="accessibility statement">Accessibility Statement</a></li>
+            <li><a href="/privacy-policy.html" class="footer-nav-link" aria-label="privacy policy">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-column">
+        <div class="footer-column__title">Contact</div>
+        <div class="contact-group">
+          <img src="/images/phone-solid-full.svg" alt="" decoding="async" width="18" height="18" loading="lazy">
+          <a href="tel:+12105406838" aria-label="call us now">(210) 540-6838</a>
+        </div>
+        <div class="contact-group">
+          <img src="/images/envelope-solid-full.svg" alt="" decoding="async" width="18" height="18" loading="lazy">
+          <a href="mailto:roger@atRoger.com" aria-label="email us now">roger&#64;atRoger.com</a>
+        </div>
+        <div class="socials">
+          <a href="" target="_blank" rel="noopener noreferrer" aria-label="instagram profile">
+            <img src="/images/instagram-brands-solid-full.svg" alt="Instagram" decoding="async" width="20" height="20" loading="lazy">
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer" aria-label="facebook profile">
+            <img src="/images/square-facebook-brands-solid-full.svg" alt="Facebook" decoding="async" width="20" height="20" loading="lazy">
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer" aria-label="tiktok profile">
+            <img src="/images/tiktok-brands-solid-full.svg" alt="TikTok" decoding="async" width="20" height="20" loading="lazy">
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer" aria-label="youtube profile">
+            <img src="/images/youtube-brands-solid-full.svg" alt="YouTube" decoding="async" width="20" height="20" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="subfooter">
+      © 2026 AR Development. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>
