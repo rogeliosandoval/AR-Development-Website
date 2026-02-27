@@ -124,7 +124,7 @@ main {
   gap: 1.5rem;
   transition: background-color 0.35s ease, color 0.35s ease;
 
-  img {
+  img#nav-logo {
     max-width: 230px;
     transition: opacity 0.2s ease;
     margin-right: auto;
@@ -146,6 +146,11 @@ main {
   li {
     font-size: 1.1rem;
     font-weight: 600;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     &:hover {
       cursor: pointer;
