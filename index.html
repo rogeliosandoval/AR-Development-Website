@@ -26,7 +26,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="Chubby Designs">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
   <!--Styles-->
   <link rel="stylesheet" href="/css/root.css">
@@ -334,7 +334,69 @@
       </div>
     </section>
 
+    <!--Contact-->
+    <section class="contact-container" id="contact">
+      <div class="contact-info">
+        <div>
+          <h2>Get In <span>Touch</span></h2>
+          <p class="contact-description">
+            I usually respond within 24 hours. You can also give me a call and reach me immediately for a chat. If I am unavailable I will call back same day.
+          </p>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon-wrapper">
+              <img src="/images/envelope-solid-full.svg" alt="" class="contact-icon">
+            </span>
+            <span>roger&#64;atRoger.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon-wrapper">
+              <img src="/images/phone-solid-full.svg" alt="" class="contact-icon">
+            </span>
+            <span>210-540-6838</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon-wrapper">
+              <img src="/images/location-dot-solid-full.svg" alt="" class="contact-icon">
+            </span>
+            <span>San Antonio, TX</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form id="form">
+
+          <input type="hidden" name="access_key" value="a7c30a5c-3076-4bac-99a2-d701a1870178"> <!-- Web3Forms Access Key -->
+
+          <input type="hidden" name="subject" value="Contact Form Submission" autocomplete="off">
+
+          <div class="form-group">
+            <label for="contact-name">Name <span class="required-indicator">*</span></label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email <span class="required-indicator">*</span></label>
+            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone <span class="optional-indicator">(optional)</span></label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="210-000-0000">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message <span class="required-indicator">*</span></label>
+            <textarea id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> <!-- Honeypot Spam Protection -->
+
+          <button id="submit-button" type="submit" class="btn btn-primary contact-submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
   </main>
   <script src="/js/theme.js"></script>
+  <script src="/js/contact.js"></script>
 </body>
 </html>
