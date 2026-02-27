@@ -199,7 +199,7 @@
 @media (max-width: 480px) {
   .testimonials-section {
     padding-top: 3rem;
-    padding-bottom: 3.2rem;
+    padding-bottom: 0;
   }
 }
 
