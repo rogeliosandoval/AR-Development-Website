@@ -77,6 +77,10 @@ $breakpoint-desktop: 1024px;
       font-size: 2rem;
     }
   }
+
+  a {
+    max-width: 200px;
+  }
 }
 
 .about-description {

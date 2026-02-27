@@ -77,6 +77,9 @@
     font-size: 2rem;
   }
 }
+.about-content a {
+  max-width: 200px;
+}
 
 .about-description {
   font-family: "IBM Plex Sans", sans-serif;
