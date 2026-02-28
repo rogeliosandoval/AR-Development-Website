@@ -20,7 +20,7 @@
 }
 @media (max-width: 480px) {
   .about-container {
-    padding: 2rem 1.25rem 3rem;
+    padding: 0 1.25rem 3rem;
     gap: 1.5rem;
   }
 }
@@ -149,10 +149,14 @@
   flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  background-color: var(--color-bg-alt);
+  border-radius: 50% 50% 50% 50%/30px 30px 30px 30px;
+  transition: background-color 0.35s ease;
 }
 @media (max-width: 768px) {
   .pricing-container {
     align-items: normal;
+    border-radius: 50% 50% 50% 50%/20px 20px 20px 20px;
   }
 }
 
@@ -418,6 +422,8 @@ body.light-mode .webapp {
 @media (max-width: 480px) {
   .contact-form-wrapper {
     padding: 1rem;
+    background-color: transparent;
+    border: none;
   }
 }
 

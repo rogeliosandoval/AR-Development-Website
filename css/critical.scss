@@ -193,14 +193,18 @@ $breakpoint-desktop: 1024px;
 .testimonials-section {
   padding: 5rem 1.5rem 5rem;
   text-align: center;
+  background-color: var(--color-bg-alt);
+  // border-radius: 50% 50% 50% 50% / 30px 30px 30px 30px;
+  transition: background-color 0.35s ease;
 
   @media (max-width: $breakpoint-desktop) {
     padding-top: 0.5rem;
+    border-radius: 50% 50% 50% 50% / 20px 20px 20px 20px;
   }
 
   @media (max-width: $breakpoint-phone) {
     padding-top: 3rem;
-    padding-bottom: 0;
+    border-radius: 50% 50% 50% 50% / 15px 15px 15px 15px;
   }
 }
 

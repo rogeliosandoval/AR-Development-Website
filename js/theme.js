@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.setAttribute('aria-label', 'Open menu');
   }
 
+  document.querySelectorAll('.nav-items a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (nav.classList.contains('nav-open')) {
+        closeMenu();
+      }
+    });
+  });
+
   hamburger.addEventListener('click', function () {
     var isOpen = nav.classList.toggle('nav-open');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');

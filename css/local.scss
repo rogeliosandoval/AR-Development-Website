@@ -23,7 +23,7 @@ $breakpoint-desktop: 1024px;
   }
 
   @media (max-width: $breakpoint-phone) {
-    padding: 2rem 1.25rem 3rem;
+    padding: 0 1.25rem 3rem;
     gap: 1.5rem;
   }
 }
@@ -153,9 +153,13 @@ $breakpoint-desktop: 1024px;
   flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  background-color: var(--color-bg-alt);
+  border-radius: 50% 50% 50% 50% / 30px 30px 30px 30px;
+  transition: background-color 0.35s ease;
 
   @media (max-width: $breakpoint-tablet) {
     align-items: normal;
+    border-radius: 50% 50% 50% 50% / 20px 20px 20px 20px;
   }
 }
 
@@ -439,6 +443,8 @@ $breakpoint-contact: 1100px;
 
   @media (max-width: $breakpoint-phone) {
     padding: 1rem;
+    background-color: transparent;
+    border: none;
   }
 }
 
