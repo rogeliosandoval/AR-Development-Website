@@ -7,6 +7,7 @@ document.getElementById('form').addEventListener('submit', function (e) {
   const object = Object.fromEntries(formData)
   const json = JSON.stringify(object)
   wrapper.innerHTML = '<div class="contact-loading"><div class="loader"></div></div>'
+  wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' })
   fetch('https://api.web3forms.com/submit', {
     method: 'POST',
     headers: {
