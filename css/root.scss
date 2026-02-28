@@ -545,6 +545,10 @@ body.light-mode .contact-group {
       background-color: var(--theme-color-main);
       border-color: var(--theme-color-main);
       transform: translateY(-3px);
+
+      img {
+        filter: brightness(0) invert(0);
+      }
     }
   }
 

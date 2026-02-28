@@ -496,6 +496,9 @@ body.light-mode .contact-group a:hover {
   border-color: var(--theme-color-main);
   transform: translateY(-3px);
 }
+.socials a:hover img {
+  filter: brightness(0) invert(0);
+}
 .socials img {
   width: 25px;
   height: 25px;

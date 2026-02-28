@@ -29,6 +29,8 @@
   <link rel="manifest" href="/site.webmanifest" />
 
   <!--Styles-->
+  <link rel="preload" as="image" href="/images/pvd-screenshot.webp">
+  <link rel="preload" as="image" href="/images/pvd-mobile.webp">
   <link rel="stylesheet" href="/css/root.css">
   <link rel="stylesheet" href="/css/critical.css">
 
@@ -62,15 +64,15 @@
   <!--                 Navigation                   -->
   <!-- ============================================ -->
   <nav class="navbar-nav">
-    <img id="nav-logo" src="/images/horizontal-logo-white.svg" alt="logo">
+    <img id="nav-logo" src="/images/horizontal-logo-white.svg" alt="logo" width="230" height="60">
     <ul class="nav-items" id="nav-items">
       <li><a href="#about" aria-label="about">About</a></li>
       <li><a href="#pricing" aria-label="pricing">Pricing</a></li>
       <li><a href="#contact" aria-label="contact">Contact</a></li>
     </ul>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
-      <img src="/images/sun-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__sun">
-      <img src="/images/moon-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__moon">
+      <img src="/images/sun-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__sun" width="33" height="33">
+      <img src="/images/moon-solid-full.svg" alt="" class="theme-toggle__icon theme-toggle__moon" width="33" height="33">
     </button>
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-items">
       <span class="hamburger__line"></span>
@@ -92,9 +94,8 @@
         </div>
       </div>
       <div class="hero-image">
-        <img class="desktop-website" src="/images/pvd-screenshot.webp" alt="desktop website">
-        <img class="mobile-website float" src="/images/pvd-mobile.webp" alt="mobile website">
-        <!-- <img src="/images/devices.svg" alt="Laptop and phone showing a custom web application interface" width="1139" height="654"> -->
+        <img class="desktop-website" src="/images/pvd-screenshot.webp" alt="desktop website" width="530" height="310">
+        <img class="mobile-website float" src="/images/pvd-mobile.webp" alt="mobile website" width="120" height="235">
       </div>
     </section>
 
@@ -131,7 +132,7 @@
     <!--About-->
     <section class="about-container" id="about">
       <div class="about-image">
-        <img src="/images/roger.webp" alt="Roger, founder of atRoger">
+        <img src="/images/roger.webp" alt="Roger, founder of atRoger" width="280" height="290">
       </div>
       <div class="about-content">
         <h2>Who is <span>Roger</span>?</h2>
@@ -142,11 +143,11 @@
         <h3 class="about-services-title">What I Build</h3>
         <div class="about-services">
           <div class="service-card">
-            <h4>Custom Web Apps</h4>
+            <h4>Web Applications</h4>
             <p>Think of it as software built specifically for your business. Instead of a generic tool that almost fits, you get exactly what you need — like an employee portal where your team can clock in, manage tasks, and submit reports.</p>
           </div>
           <div class="service-card">
-            <h4>Simple Websites</h4>
+            <h4>Performant Websites</h4>
             <p>Hand-coded from scratch — no drag-and-drop builders. Clean, fast, and built to last. By using just HTML, CSS, and JavaScript, I ensure it runs faster, has more flexibility, and allows me to have COMPLETE control over your website.</p>
           </div>
           <div class="service-card">
@@ -344,19 +345,19 @@
         <div class="contact-details">
           <div class="contact-item">
             <span class="contact-icon-wrapper">
-              <img src="/images/envelope-solid-full.svg" alt="" class="contact-icon">
+              <img src="/images/envelope-solid-full.svg" alt="" class="contact-icon" width="46" height="46">
             </span>
             <span>roger&#64;atRoger.com</span>
           </div>
           <div class="contact-item">
             <span class="contact-icon-wrapper">
-              <img src="/images/phone-solid-full.svg" alt="" class="contact-icon">
+              <img src="/images/phone-solid-full.svg" alt="" class="contact-icon" width="46" height="46">
             </span>
             <span>210-540-6838</span>
           </div>
           <div class="contact-item">
             <span class="contact-icon-wrapper">
-              <img src="/images/location-dot-solid-full.svg" alt="" class="contact-icon">
+              <img src="/images/location-dot-solid-full.svg" alt="" class="contact-icon" width="46" height="46">
             </span>
             <span>San Antonio, TX</span>
           </div>
@@ -400,8 +401,8 @@
     <div class="footer-container">
       <div class="footer-column footer-column--brand">
         <a href="/" aria-label="go to homepage">
-          <img class="footer-logo footer-logo--dark" src="/images/horizontal-logo-white.svg" alt="atRoger logo" draggable="false" loading="lazy">
-          <img class="footer-logo footer-logo--light" src="/images/horizontal-logo-black.svg" alt="atRoger logo" draggable="false" loading="lazy">
+          <img class="footer-logo footer-logo--dark" src="/images/horizontal-logo-white.svg" alt="atRoger logo" draggable="false" loading="lazy" width="200" height="53">
+          <img class="footer-logo footer-logo--light" src="/images/horizontal-logo-black.svg" alt="atRoger logo" draggable="false" loading="lazy" width="200" height="53">
         </a>
         <p>Affordable web apps and websites for your business. Let's get to work today!</p>
         <a class="btn btn-primary footer-cta" href="#contact">Get Started</a>
