@@ -1,9 +1,21 @@
+.hero-note {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  color: var(--color-text);
+}
+.hero-note b {
+  color: var(--theme-color-accent);
+}
+
 .hero-container {
+  position: relative;
   display: grid;
   grid-template-columns: 55fr 45fr;
   align-items: center;
   gap: 3rem;
-  padding: 4rem 8rem 2rem;
+  padding: 4rem 8rem 3rem;
   margin-top: 1rem;
 }
 @media (max-width: 1024px) {
@@ -22,7 +34,7 @@
 }
 @media (max-width: 480px) {
   .hero-container {
-    padding: 2rem 1.25rem 0;
+    padding: 2rem 1.25rem 4rem;
     gap: 1.5rem;
   }
 }
@@ -201,7 +213,8 @@
 }
 @media (max-width: 480px) {
   .testimonials-section {
-    padding-top: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
     border-radius: 50% 50% 50% 50%/15px 15px 15px 15px;
   }
 }
