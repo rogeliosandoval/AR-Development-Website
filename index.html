@@ -34,8 +34,8 @@
   <link rel="preload" as="font" href="/fonts/IBMPlexSans-Regular.ttf" type="font/truetype" crossorigin>
 
   <!--Styles-->
-  <link rel="preload" as="image" href="/images/pvd-screenshot.webp">
-  <link rel="preload" as="image" href="/images/pvd-mobile.webp">
+  <link rel="preload" as="image" href="/images/hero/pvd-screenshot.webp">
+  <link rel="preload" as="image" href="/images/hero/pvd-mobile.webp">
   <link rel="stylesheet" href="/css/root.css">
   <link rel="stylesheet" href="/css/critical-min.css">
 
@@ -100,8 +100,20 @@
         </div>
       </div>
       <div class="hero-image">
-        <img class="desktop-website" src="/images/login-desk.webp" alt="desktop website" width="530" height="310">
-        <img class="mobile-website float" src="/images/login-mobile.svg" alt="mobile website" width="120" height="235">
+        <div class="hero-slideshow-desk">
+          <img class="slide-desk" src="/images/hero/pvd-screenshot.webp" alt="desktop design" width="530" height="310">
+          <img class="slide-desk" src="/images/hero/login-desk.webp" alt="desktop design" width="530" height="310">
+          <img class="slide-desk" data-src-light="/images/hero/dash-desk-light.webp" data-src-dark="/images/hero/dash-desk-dark.webp" src="/images/hero/dash-desk-light.webp" alt="desktop design" width="530" height="310">
+          <img class="slide-desk" src="/images/hero/bouncers-desk.webp" alt="desktop design" width="530" height="310">
+          <img class="slide-desk" src="/images/hero/nestled-desk.webp" alt="desktop design" width="530" height="310">
+        </div>
+        <div class="hero-slideshow-mobile float">
+          <img class="slide-mobile" src="/images/hero/pvd-mobile.webp" alt="mobile design" width="120" height="235">
+          <img class="slide-mobile" src="/images/hero/login-mobile.svg" alt="mobile design" width="120" height="235">
+          <img class="slide-mobile" data-src-light="/images/hero/dash-mobile-light.svg" data-src-dark="/images/hero/dash-mobile-dark.svg" src="/images/hero/dash-mobile-light.svg" alt="mobile design" width="120" height="235">
+          <img class="slide-mobile" src="/images/hero/bouncers-mobile.svg" alt="mobile design" width="120" height="235">
+          <img class="slide-mobile" src="/images/hero/nestled-mobile.webp" alt="mobile design" width="120" height="235">
+        </div>
       </div>
     </section>
 
@@ -461,5 +473,6 @@
   <script src="/js/theme-min.js"></script>
   <script src="/js/contact-min.js"></script>
   <script src="/js/animations.js" defer></script>
+  <script src="/js/hero-slideshow.js" defer></script>
 </body>
 </html>
