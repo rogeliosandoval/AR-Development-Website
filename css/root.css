@@ -33,42 +33,42 @@ body {
   src: url("/fonts/Inter_24pt-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter_24pt-Bold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter_24pt-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "IBM Plex Sans";
   src: url("/fonts/IBMPlexSans-Light.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "IBM Plex Sans";
   src: url("/fonts/IBMPlexSans-Regular.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "IBM Plex Sans";
   src: url("/fonts/IBMPlexSans-Bold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 body, html {
   margin: 0;
