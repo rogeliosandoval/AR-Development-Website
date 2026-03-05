@@ -28,6 +28,21 @@ body {
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+@media screen and (max-width: 1110px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+}
+
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter_24pt-Regular.ttf") format("truetype");

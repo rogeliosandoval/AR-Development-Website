@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,7 @@
   <!--Styles-->
   <link rel="preload" as="image" href="/images/pvd-screenshot.webp">
   <link rel="preload" as="image" href="/images/pvd-mobile.webp">
-  <link rel="stylesheet" href="/css/root-min.css">
+  <link rel="stylesheet" href="/css/root.css">
   <link rel="stylesheet" href="/css/critical-min.css">
 
   <!--Defer loading the whole page css-->
@@ -108,25 +108,25 @@
     <!--Testimonial Section-->
     <div class="testimonials-section">
       <div class="testimonials">
-        <div class="testimonial-box">
+        <div class="testimonial-box reveal" style="transition-delay: 0ms">
           <div class="testimonial-stars">
             &#9733; &#9733; &#9733; &#9733; &#9733;
           </div>
           <p>"I needed a custom app for my business that cut our usual process in half, <span>now my employees and I are more productive</span>."</p>
         </div>
-        <div class="testimonial-box">
+        <div class="testimonial-box reveal" style="transition-delay: 100ms">
           <div class="testimonial-stars">
             &#9733; &#9733; &#9733; &#9733; &#9733;
           </div>
           <p>"Roger <span>made my business page look very nice</span>. Highly recommend him and his services."</p>
         </div>
-        <div class="testimonial-box">
+        <div class="testimonial-box reveal" style="transition-delay: 200ms">
           <div class="testimonial-stars">
             &#9733; &#9733; &#9733; &#9733; &#9733;
           </div>
           <p>"Roger is exceptional! Communication is on point as well as expertise in software engineering. <span>I will be a returning customer!</span>"</p>
         </div>
-        <div class="testimonial-box">
+        <div class="testimonial-box reveal" style="transition-delay: 300ms">
           <div class="testimonial-stars">
             &#9733; &#9733; &#9733; &#9733; &#9733;
           </div>
@@ -167,14 +167,14 @@
 
     <!--Pricing-->
     <section class="pricing-container" id="pricing">
-      <div class="pricing-title">
+      <div class="pricing-title reveal">
         <h2><span>Pricing</span> Packages</h2>
         <h3>No contracts. Cancel anytime. 100% satisfaction guaranteed.</h3>
       </div>
 
       <div class="pricing-cards">
 
-        <div class="pricing-card">
+        <div class="pricing-card reveal" style="transition-delay: 0ms">
           <div class="pricing-card__title">Starter</div>
           <div class="pricing-card__features">
             <div class="pricing-card__features--feature">
@@ -216,7 +216,7 @@
           </div>
         </div>
 
-        <div class="pricing-card">
+        <div class="pricing-card reveal" style="transition-delay: 100ms">
           <div class="pricing-card__title">Business</div>
           <div class="pricing-card__features">
             <div class="pricing-card__features--feature">
@@ -282,7 +282,7 @@
           </div>
         </div>
 
-        <div class="pricing-card webapp">
+        <div class="pricing-card webapp reveal" style="transition-delay: 200ms">
           <div class="pricing-card__title">Web App</div>
           <div class="pricing-card__features">
             <div class="pricing-card__features--feature">
@@ -386,7 +386,7 @@
           </div>
           <div class="form-group">
             <label for="contact-phone">Phone <span class="optional-indicator">(optional)</span></label>
-            <input type="tel" id="contact-phone" name="phone" placeholder="210-000-0000">
+            <input type="tel" id="contact-phone" name="phone" placeholder="Phone #">
           </div>
           <div class="form-group">
             <label for="contact-message">Message <span class="required-indicator">*</span></label>
@@ -417,9 +417,10 @@
         <div class="footer-column__title">Quick Links</div>
         <nav>
           <ul class="quick-links">
-            <li><a href="/" class="footer-nav-link" aria-label="home">Home</a></li>
+            <li><a href="#top" class="footer-nav-link" aria-label="home">Home</a></li>
             <li><a href="#about" class="footer-nav-link" aria-label="about">About</a></li>
             <li><a href="#pricing" class="footer-nav-link" aria-label="pricing">Pricing</a></li>
+            <li><a href="https://g.page/r/CYGzaFS8VUH-EAE/review" class="footer-nav-link" aria-label="leave a review" target="_blank" rel="noopener noreferrer">Leave a Review</a></li>
             <li><a href="/accessibility-statement.html" class="footer-nav-link" aria-label="accessibility statement">Accessibility Statement</a></li>
             <li><a href="/privacy-policy.html" class="footer-nav-link" aria-label="privacy policy">Privacy Policy</a></li>
           </ul>
@@ -459,5 +460,6 @@
   <script src="https://localimpact.com/js/v2/embed.js?id=b8f5b4fd2464663219f4d9b7ec62f159" type="text/javascript" defer></script>
   <script src="/js/theme-min.js"></script>
   <script src="/js/contact-min.js"></script>
+  <script src="/js/animations.js" defer></script>
 </body>
 </html>

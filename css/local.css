@@ -593,4 +593,25 @@ body.light-mode .loader {
 }
 body.light-mode .contact-success__icon {
   filter: invert(16%) sepia(78%) saturate(1648%) hue-rotate(207deg) brightness(97%) contrast(108%);
-}/*# sourceMappingURL=local.css.map */
+}
+
+/* ============================================ */
+/*              Scroll Reveal                   */
+/* ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+/*# sourceMappingURL=local.css.map */
