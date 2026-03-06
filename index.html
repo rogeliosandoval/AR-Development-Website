@@ -28,19 +28,14 @@
   <meta name="apple-mobile-web-app-title" content="atRoger" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!--Fonts-->
-  <link rel="preload" as="font" href="/fonts/Inter_24pt-ExtraBold.ttf" type="font/truetype" crossorigin>
-  <link rel="preload" as="font" href="/fonts/Inter_24pt-Bold.ttf" type="font/truetype" crossorigin>
-  <link rel="preload" as="font" href="/fonts/IBMPlexSans-Regular.ttf" type="font/truetype" crossorigin>
-
   <!--Styles-->
   <link rel="preload" as="image" href="/images/hero/pvd-screenshot.webp">
   <link rel="preload" as="image" href="/images/hero/pvd-mobile.webp">
-  <link rel="stylesheet" href="/css/root.css">
+  <link rel="stylesheet" href="/css/root-min.css">
   <link rel="stylesheet" href="/css/critical-min.css">
 
   <!--Defer loading the whole page css-->
-  <link rel="stylesheet" href="/css/local.css" media="print" onload="this.media='all'; this.onload=null;">
+  <link rel="stylesheet" href="/css/local-min.css" media="print" onload="this.media='all'; this.onload=null;">
 
   <!--Logo theme visibility — must be inline so it applies before local.css deferred load-->
   <style>
@@ -52,7 +47,7 @@
 
   <!--If the user has javascript disbaled, load these stylesheets-->
   <noscript>
-    <link rel="stylesheet" href="/css/local.css">
+    <link rel="stylesheet" href="/css/local-min.css">
   </noscript>
 
   <title>AR Development | Web Application Design | San Antonio, TX</title>
@@ -164,8 +159,7 @@
       <div class="about-content">
         <h2>Who is <span>Roger</span>?</h2>
         <p class="about-description">
-          I'm a solo developer with over 6 years of experience building web
-          applications and websites for businesses. I started AR Development out of love for software and a desire to give back to my community!
+          I'm a web developer with over 6 years of experience building websites and web applications for businesses. I founded AR Development because I love building things on the web and wanted to use my skills to help businesses in my community.
         </p>
         <h3 class="about-services-title">What I Build</h3>
         <div class="about-services">
@@ -202,13 +196,13 @@
             <p class="work-group-desc">Real businesses, hand-coded from scratch — no templates, no shortcuts.</p>
           </div>
           <div class="work-logos">
-            <a href="#" class="work-logo-item" aria-label="Bouncers R Us">
+            <a href="https://bouncersrus-satx.com/" target="_blank" class="work-logo-item" aria-label="Bouncers R Us">
               <img src="/images/logos/bouncers-logo.svg" alt="Bouncers R Us" width="140" height="60">
             </a>
-            <a href="#" class="work-logo-item" aria-label="PVD Solutions">
+            <a href="https://pvd-solutions.com/" target="_blank" class="work-logo-item" aria-label="PVD Solutions">
               <img class="pvd-logo" src="/images/logos/pvd-logo.svg" alt="PVD Solutions" width="90" height="60">
             </a>
-            <a href="#" class="work-logo-item" aria-label="Nestled Roofing">
+            <a href="https://nestledroofing.com/" target="_blank" class="work-logo-item" aria-label="Nestled Roofing">
               <img class="logo-for-dark" src="/images/logos/nestled-logo-light.webp" alt="Nestled Roofing" width="140" height="60">
               <img class="logo-for-light" src="/images/logos/nestled-logo-dark.webp" alt="Nestled Roofing" width="140" height="60">
             </a>
@@ -224,11 +218,11 @@
             <p class="work-group-desc">SaaS tools and browser extensions — ideas I turned into real, working products.</p>
           </div>
           <div class="work-logos">
-            <a href="#" class="work-logo-item" aria-label="PlainClient CRM">
+            <a href="https://plainclient.com/" target="_blank" class="work-logo-item" aria-label="PlainClient CRM">
               <img class="logo-for-dark" src="/images/logos/plainclient-logo-light.svg" alt="PlainClient CRM" width="140" height="60">
               <img class="logo-for-light" src="/images/logos/plainclient-logo-dark.svg" alt="PlainClient CRM" width="140" height="60">
             </a>
-            <a href="#" class="work-logo-item" aria-label="Back - Instagram Unfollow Tool">
+            <a href="https://whoaintfollowingmeback.com/" target="_blank" class="work-logo-item" aria-label="Back - Instagram Unfollow Tool">
               <img class="logo-for-dark" src="/images/logos/back-logo-light.svg" alt="Back - Instagram Unfollow Tool" width="140" height="60">
               <img class="logo-for-light" src="/images/logos/back-logo-dark.svg" alt="Back - Instagram Unfollow Tool" width="140" height="60">
             </a>
@@ -533,7 +527,7 @@
   <script src="https://localimpact.com/js/v2/embed.js?id=b8f5b4fd2464663219f4d9b7ec62f159" type="text/javascript" defer></script>
   <script src="/js/theme-min.js"></script>
   <script src="/js/contact-min.js"></script>
-  <script src="/js/animations.js" defer></script>
-  <script src="/js/hero-slideshow.js" defer></script>
+  <script src="/js/animations-min.js" defer></script>
+  <script src="/js/hero-slideshow-min.js" defer></script>
 </body>
 </html>

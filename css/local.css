@@ -227,7 +227,7 @@
 }
 @media (max-width: 480px) {
   .work-group-desc {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -314,8 +314,8 @@ body.light-mode .logo-for-light {
     gap: 1.5rem 2rem;
   }
   .work-logo-item img {
-    width: 110px;
-    height: 50px;
+    width: 150px;
+    height: 90px;
   }
 }
 .pricing-container {
@@ -324,8 +324,8 @@ body.light-mode .logo-for-light {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 4rem;
-  padding-bottom: 7rem;
+  padding-top: 5.5rem;
+  padding-bottom: 9rem;
   background-color: var(--color-bg-alt);
   border-radius: 50% 50% 50% 50%/30px 30px 30px 30px;
   transition: background-color 0.35s ease;

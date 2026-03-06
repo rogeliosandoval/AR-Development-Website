@@ -1,0 +1,1 @@
+!function(){var e=document.querySelectorAll(".reveal");if(e.length){var r=new IntersectionObserver((function(e){e.forEach((function(e){e.isIntersecting&&(e.target.classList.add("reveal--visible"),r.unobserve(e.target))}))}),{threshold:.1});e.forEach((function(e){r.observe(e)}))}}();
