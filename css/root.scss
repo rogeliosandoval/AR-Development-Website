@@ -91,6 +91,7 @@ body, html {
   background-color: var(--color-bg);
   overflow-x: hidden;
   min-height: 100vh;
+  scroll-behavior: smooth;
 
   p {
     font-family: "IBM Plex Sans", sans-serif;

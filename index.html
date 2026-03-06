@@ -40,11 +40,19 @@
   <link rel="stylesheet" href="/css/critical-min.css">
 
   <!--Defer loading the whole page css-->
-  <link rel="stylesheet" href="/css/local-min.css" media="print" onload="this.media='all'; this.onload=null;">
+  <link rel="stylesheet" href="/css/local.css" media="print" onload="this.media='all'; this.onload=null;">
+
+  <!--Logo theme visibility — must be inline so it applies before local.css deferred load-->
+  <style>
+    .logo-for-dark  { display: block; }
+    .logo-for-light { display: none; }
+    body.light-mode .logo-for-dark  { display: none; }
+    body.light-mode .logo-for-light { display: block; }
+  </style>
 
   <!--If the user has javascript disbaled, load these stylesheets-->
   <noscript>
-    <link rel="stylesheet" href="/css/local-min.css">
+    <link rel="stylesheet" href="/css/local.css">
   </noscript>
 
   <title>AR Development | Web Application Design | San Antonio, TX</title>
@@ -72,6 +80,7 @@
     <img id="nav-logo" src="/images/horizontal-logo-white.svg" alt="logo" width="240" height="66">
     <ul class="nav-items" id="nav-items">
       <li><a href="#about" aria-label="about">About</a></li>
+      <li><a href="#my-work" aria-label="my work">My Work</a></li>
       <li><a href="#pricing" aria-label="pricing">Pricing</a></li>
       <li><a href="#contact" aria-label="contact">Contact</a></li>
     </ul>
@@ -174,6 +183,58 @@
           </div>
         </div>
         <a href="#contact" class="btn btn-primary test">Work with me</a>
+      </div>
+    </section>
+
+    <!--My Work-->
+    <section class="my-work-container" id="my-work">
+      <div class="work-title">
+        <h2>My <span>Work</span></h2>
+        <p>A look at some clients I've served and the products I've shipped.</p>
+      </div>
+
+      <div class="work-groups reveal" style="transition-delay: 0ms">
+
+        <!-- Client Websites -->
+        <div class="work-group">
+          <div class="work-group-header">
+            <span class="work-group-label">Client Websites</span>
+            <p class="work-group-desc">Real businesses, hand-coded from scratch — no templates, no shortcuts.</p>
+          </div>
+          <div class="work-logos">
+            <a href="#" class="work-logo-item" aria-label="Bouncers R Us">
+              <img src="/images/logos/bouncers-logo.svg" alt="Bouncers R Us" width="140" height="60">
+            </a>
+            <a href="#" class="work-logo-item" aria-label="PVD Solutions">
+              <img class="pvd-logo" src="/images/logos/pvd-logo.svg" alt="PVD Solutions" width="90" height="60">
+            </a>
+            <a href="#" class="work-logo-item" aria-label="Nestled Roofing">
+              <img class="logo-for-dark" src="/images/logos/nestled-logo-light.webp" alt="Nestled Roofing" width="140" height="60">
+              <img class="logo-for-light" src="/images/logos/nestled-logo-dark.webp" alt="Nestled Roofing" width="140" height="60">
+            </a>
+          </div>
+        </div>
+
+        <div class="work-group-divider"></div>
+
+        <!-- Products I've Built -->
+        <div class="work-group">
+          <div class="work-group-header">
+            <span class="work-group-label">Products I've Built</span>
+            <p class="work-group-desc">SaaS tools and browser extensions — ideas I turned into real, working products.</p>
+          </div>
+          <div class="work-logos">
+            <a href="#" class="work-logo-item" aria-label="PlainClient CRM">
+              <img class="logo-for-dark" src="/images/logos/plainclient-logo-light.svg" alt="PlainClient CRM" width="140" height="60">
+              <img class="logo-for-light" src="/images/logos/plainclient-logo-dark.svg" alt="PlainClient CRM" width="140" height="60">
+            </a>
+            <a href="#" class="work-logo-item" aria-label="Back - Instagram Unfollow Tool">
+              <img class="logo-for-dark" src="/images/logos/back-logo-light.svg" alt="Back - Instagram Unfollow Tool" width="140" height="60">
+              <img class="logo-for-light" src="/images/logos/back-logo-dark.svg" alt="Back - Instagram Unfollow Tool" width="140" height="60">
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
