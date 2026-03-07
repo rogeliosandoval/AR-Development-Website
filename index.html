@@ -155,6 +155,17 @@
     <section class="about-container" id="about">
       <div class="about-image">
         <img src="/images/roger.webp" alt="Roger, founder of atRoger" width="440" height="450">
+        <div class="about-social-links">
+          <a href="https://github.com/rogeliosandoval" target="_blank" rel="noopener noreferrer" class="about-social-link" aria-label="GitHub profile">
+            <img src="/images/square-github-brands-solid-full.svg" alt="GitHub" width="28" height="28">
+          </a>
+          <a href="https://www.linkedin.com/in/rogeliosandoval/" target="_blank" rel="noopener noreferrer" class="about-social-link" aria-label="LinkedIn profile">
+            <img src="/images/linkedin-brands-solid-full.svg" alt="LinkedIn" width="28" height="28">
+          </a>
+          <button class="about-social-link about-award-btn" aria-label="View certification">
+            <img src="/images/award-solid-full.svg" alt="Certification" width="28" height="28">
+          </button>
+        </div>
       </div>
       <div class="about-content">
         <h2>Who is <span>Roger</span>?</h2>
@@ -437,6 +448,8 @@
         </div>
       </div>
       <div class="contact-form-wrapper">
+        <img src="/images/avatar-logo-light.png" alt="" class="contact-form-logo contact-form-logo--dark" aria-hidden="true">
+        <img src="/images/avatar-logo-dark.png" alt="" class="contact-form-logo contact-form-logo--light" aria-hidden="true">
         <form id="form">
 
           <input type="hidden" name="access_key" value="a7c30a5c-3076-4bac-99a2-d701a1870178"> <!-- Web3Forms Access Key -->
@@ -524,10 +537,29 @@
     </div>
   </footer>
   <div data-romw-token="00kRH7IimgouLwIqgC6llvc6mkA33493Ax8ow7ATwiUDrtvTZv"></div>
+  <!-- Certification Modal -->
+  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certification">
+    <div class="cert-modal-backdrop"></div>
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" aria-label="Close">&times;</button>
+      <img src="/images/cert-hq.png" alt="AR Development Certification" class="cert-modal-img">
+    </div>
+  </div>
   <script src="https://localimpact.com/js/v2/embed.js?id=b8f5b4fd2464663219f4d9b7ec62f159" type="text/javascript" defer></script>
   <script src="/js/theme-min.js"></script>
   <script src="/js/contact-min.js"></script>
   <script src="/js/animations-min.js" defer></script>
   <script src="/js/hero-slideshow-min.js" defer></script>
+  <script>
+    (function () {
+      var modal = document.getElementById('cert-modal');
+      function openModal() { modal.classList.add('active'); }
+      function closeModal() { modal.classList.remove('active'); }
+      document.querySelector('.about-award-btn').addEventListener('click', openModal);
+      document.querySelector('.cert-modal-close').addEventListener('click', closeModal);
+      document.querySelector('.cert-modal-backdrop').addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
 </body>
 </html>

@@ -30,20 +30,61 @@ $breakpoint-desktop: 1024px;
 
 .about-image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
-  img {
+  img:first-child {
     width: 100%;
     max-width: 440px;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    border-bottom: 10px solid var(--theme-color-accent);
+    // border-bottom: 10px solid var(--theme-color-accent);
 
     @media (max-width: $breakpoint-desktop) {
       max-width: 290px;
     }
+  }
+}
+
+.about-social-links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.about-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.35s ease;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+
+  img {
+    width: 28px;
+    height: 28px;
+    filter: invert(70%) sepia(82%) saturate(441%) hue-rotate(152deg) brightness(100%) contrast(93%);
+    transition: filter 0.35s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--theme-color-main);
+  }
+}
+
+body.light-mode {
+  .about-social-link img {
+    filter: none;
   }
 }
 
@@ -608,6 +649,8 @@ $breakpoint-contact: 1100px;
 }
 
 .contact-form-wrapper {
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-card-bg);
   border: 1px solid var(--color-card-border);
   border-radius: 12px;
@@ -621,12 +664,40 @@ $breakpoint-contact: 1100px;
 
   form {
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   @media (max-width: $breakpoint-phone) {
     padding: 1rem;
     background-color: transparent;
     border: none;
+  }
+}
+
+.contact-form-logo {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 260px;
+  height: auto;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.contact-form-logo--light {
+  display: none;
+}
+
+body.light-mode {
+  .contact-form-logo--dark {
+    display: none;
+  }
+
+  .contact-form-logo--light {
+    display: block;
   }
 }
 
@@ -788,6 +859,68 @@ body.light-mode {
 
   .contact-success__icon {
     filter: invert(16%) sepia(78%) saturate(1648%) hue-rotate(207deg) brightness(97%) contrast(108%);
+  }
+}
+// #endregion
+
+// #region Certification Modal
+.cert-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.cert-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.cert-modal-content {
+  position: relative;
+  z-index: 1;
+  max-width: min(90vw, 900px);
+  max-height: 90vh;
+}
+
+.cert-modal-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--theme-color-main);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
   }
 }
 // #endregion
